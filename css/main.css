@@ -2,7 +2,9 @@ body {
     font-family: 'poppins',sans-serif;
 }
 
-
+main ul{
+    list-style: none;
+}
 
 header {
     background: #F8F3F0;
@@ -14,15 +16,11 @@ header h1{
     margin: 0;
 }
 
-main ul{
-    list-style: none;
-}
-
 main ul li a{
     text-decoration: none;
 }
 
-nav ul{
+header nav ul{
     list-style: none;
 }
 
