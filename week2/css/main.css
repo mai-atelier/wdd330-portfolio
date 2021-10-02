@@ -15,13 +15,18 @@ header h1{
 }
 
 main ul li a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav ul{
     list-style: none;
+    text-decoration: none;
 }
 
 h3 {
     margin: 0;
+}
+
+section+section {
+margin: 2em;
 }

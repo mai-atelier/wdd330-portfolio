@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD330 Event Examples">
+    <title> WDD330 Mai Manago | Portfolio | week3 | Event Examples</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            font-family: sans-serif;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        ul, div {
+            width: 200px;
+            min-height: 200px;
+            margin: 2em;
+            background-color: aliceblue;
+            float: left;
+            margin: 10px;
+        }
+
+        .highlight {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <p>💁 Please have a look at the JavaScript Console.</p>
+ 
+       
+    <div id="click">
+    <p id="hide"> Click On Me</p>
+    <span id="action"></span> 
+    </div> 
+
+    <div id="dbclick">Double Click On Me</div>
+    <div id="mouse">Hover On Me</div>
+    <div id="once"> A One Time Thing... </div>
+    <div>
+        <a id="broken" href="https://sitepoint.com"> Broken Link</a>
+    </div>
+    
+    <ul id="list">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+    <script src="js/events.js"></script>
+</body>
+</html>
