@@ -1,42 +1,45 @@
 import output from './utilities.js';
+import {key, data, toDo, toDoList} from './ls.js';
+
 //add a todo class to create an object
-class todo {
-    constructor( buildList, savingKey){
+export default class ToDos {
+    constructor( buildList, key){
 //set a variable with the element our todo list will be built in
 this.buildList = buildList;
 
 //the key we will use to read/write from localStorage
-this.savingKey = savingKey;
+this.key = key;
+    }
+
+    addTodo(){
+    //user input
+    const input = document.getElementById('newItem').value
+    return saveTodo();
+    //add it to the todoList
+    const addList = toDoList.push(input);
+    }
+    listTodos(){
+
     }
 }
-    todoList = null;
-    export default todo; 
+
+todoList = null;
 
 
-// build a todo object
-const toDo = {};
-const toDoList = [toDo];
+        
 
 //A todo should look like this: { id : timestamp, content: string, completed: bool }
-function saveTodo(task, key){ 
-task();
-key();
-}
+function saveTodo(data, key){ 
 
-//@param {string} task The text of the task to be saved.
-function task() {
+//@param {string} task: The text of the task to be saved.
+
 
 //create values
-    
     //timestamp 
     const date = new Date();
     const timestamp = date.toString()
   
-    
-    //user input
-    const input = document.getElementById('newItem').value
-    const string = 'hi';
-    
+
     //if user input was null
     if ( input == null){
         input = '';
@@ -48,29 +51,7 @@ function task() {
 //create property
 toDo.id = timestamp;
 toDo.content = string;
-
-
 }
-
-
-//@param {string} key The key under which the value is stored under in LS 
-function key() {
-  
-}
-
-//if there is any task yet
-if (toDoList == null){
-    toDoList = [];
-}
-
-//add it to the todoList
-const addList = toDoList.push(newItem);
-
-//save the new list to local storage
-//save to a local storge
-const savingKey = localStorage.setItem( 'allTask', addList )
-
-
 
 //get Todo 
     //In the Todos.js module, but not in the Todos class create the following function
@@ -80,4 +61,12 @@ const savingKey = localStorage.setItem( 'allTask', addList )
     */
     function getTodos(key) { 
         localStorage.getItem( 'allTask', addList )
+
+
+//save the new list to local storage
+//save to a local storge
+const savingKey = localStorage.setItem( 'allTask', addList )
+
     }
+
+    
