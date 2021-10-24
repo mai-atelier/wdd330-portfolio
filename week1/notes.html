@@ -20,13 +20,16 @@
   		var aNoteDescription = document.getElementById("description_input").value
   		var aNoteText = document.getElementById("note_editor").value
   		var aCompleteNote = currentDateAndTime.toLocaleString() + "--" + aNoteDescription 
-  		aCompleteNote += "<p>" + aNoteText + "</p>"
-
+  		
+		  aCompleteNote += "<p>" + aNoteText + "</p>"
+		//read a note
 		var storedNotesString = localStorage.getItem("all_notes")
 		var allNotes = JSON.parse(storedNotesString)
 		if(allNotes == null){
 			allNotes = []
 		}
+
+		//save a new note
 		allNotes.push(aCompleteNote)
 		var allNotesString = JSON.stringify(allNotes)
 		localStorage.setItem("all_notes",allNotesString)
@@ -35,7 +38,7 @@
 		document.getElementById("description_input").value = null
 		document.getElementById("note_editor").value = null
   	}
-	  
+
   	function showAllNotes(){
 		var storedNotesString = localStorage.getItem("all_notes")
 		allNotes = JSON.parse(storedNotesString)

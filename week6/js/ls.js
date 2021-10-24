@@ -1,33 +1,21 @@
-import toDolist from "./ToDos";
-
-
-function readFromLS(key) { 
-
-//read a value from local storage
-const key = localStorage.getItem('allTask')
- //parse it as JSON storedList
-const allTask = JSON.parse(key)
-
-
-// @return {array} The value as an array of objects 
-return writeToLS(allTask);
+import {} from "./ToDos.js";
+export default class saveLS {
+//get items from ls
+ readFromLS(key) {
+    //read a value from local storage
+    let storedList = localStorage.getItem('key')
+    if( storedList == null){
+        storedList = []
+    }
+    //JSON.parse(storedList);
 }
 
-function writeToLS(key, data) { 
-//write an array of objects to local storage under the key
-//storing data as an object
-const toDo = {};
-const toDoList = [toDo];
+//saving
+writeToLS(key, data){
+//write an array of objects to local storage under the provided key @param {string} key
+let writeList = JSON.stringify(toDoList)
+localStorage.setItem('key', writeList)
 
-//@param {array} data The information to be stored as an array of objects. Must be serialized.
-//returning a object to a string of JSON data to store
-const data = JSON.stringify(key)
-localStorage.setItem('allTask', data)
+console.log(writeList);
 }
-
-
-
-
-
-
-
+}

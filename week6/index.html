@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title> Todo application </title>
+    <style>
+        div+div {
+            margin: 2em 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            width: 200px;
+            padding: 0.5em;
+            border: solid 1px black;
+        }
+        li button {
+            float: right;
+        }
+
+        .button {
+            width: 80px;
+            padding: .5em;
+            border: solid 1px skyblue;
+            border-radius: 50px;
+        }
+
+        .active {
+            background: aliceblue;
+        }
+
+    </style>
 </head>
 <body>
     <div>
@@ -12,18 +42,19 @@
     <ul class="itemList">
     </ul>
     </div>
-    <span>All</span>
-    <span>Active</span>
-    <span>Completed</span>
-    filitering buttons /onclick, filter / toggle class? css active
+    <div>
+    <span id="total" class="button active">All</span>
+    <span id="filter"  class="button">Active</span>
+    <span id="done"  class="button">Completed</span>
+    </div>
     <footer>
 
 
         <form id="user">
-            <input type="text" id="newItem">
-            <button onclick="createTask()">+</button>
+            <input type="text" id="newTask">
+            <button type="submit">+</button>
         </form>
     </footer>
-    <script type="module" src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
