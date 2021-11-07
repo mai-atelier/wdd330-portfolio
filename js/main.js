@@ -23,8 +23,15 @@ const links = [
     {
         label: "06: Lesson 6",
         url: "week6/index.html"
+    },
+    {
+        label: "07: Lesson 7",
+        url: "week7/w7.html"
+    },
+    {
+        label: "08: Lesson 8",
+        url: "week8/w8.html"
     }
-
 ]
 
 for (let i = 0; i<links.length; i++){

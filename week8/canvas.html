@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+.playground {
+    border: dotted 2px gray;
+}
+    </style>
+    <title></title>
+</head>
+<body>
+    <header>
+        <h1>WDD330 Portfolio</h1>
+    
+    <nav>
+      <ul class="list">
+        <li>📖<a href="w8.html">Notes</a></li>
+        <li>🚀<a target="_blank" href="canvas.html">Exercises</a></li>
+        <li>📚<a target="_blank" href="#">References</a></li>
+        <li>🐶<a href="starwars.html">Team Activity</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Canvas API</h2>
+            <p>Canvas was invented by Apple</p>
+            <p>< canvas > < /canvas > </p>
+            <ul>
+                <li> give id attributes for DOM and grab elements from JS </li>
+                <li> set the width and height to determine the size of the coordinate system </li>
+                <li> CSS width and height set the display size only</li>
+                <li> the top corner is (0,0)</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Canvas JavaScript API</h3>
+            <ul>
+                <li>Canvas JavaScript API</li>
+                <li><a href="https://www.khronos.org/webgl/">3D graphics</a></li>
+                <li>strokeStyle or fillStyle</li>
+                <ul>
+                    <li>color name can use any CSS colors</li>
+                    <li>Canvasgradient</li>
+                    <li>CanvasPattern</li>
+                </ul>
+            </ul>
+            <p>Creating a gradient</p>
+            <ul>
+                <li>addColorstop()</li>
+            </ul>
+            <p>offset value is 0 to 1, at the start the gradient begins and at the end</p>
+        </div>
+        <div>
+            <h3>Creating Paths</h3>
+            <ol>
+                 <li>layout the path</li>
+                <li> stroke the path</li>
+                <li>fill the path</li>
+            </ol>
+        </div>
+    <div>
+    <h2><a href="https://www.youtube.com/watch?v=9Y4P3FvZ5bg"> Scalable Vector Graphics</a></h2>
+    <p>< svg >< shape >< /svg ></p>
+    <ul>
+        <li>markup format for two-dimension images</li>
+        <li>a markup language can apply DOM and CSS</li>
+    </ul>
+</div>
+<div>
+
+    <h2>Canvas Playground</h2>
+    <canvas id="demo1" class="playground" width="200" height="200"></canvas>
+    <canvas id="demo2" class="playground" width="200" height="200"></canvas>
+    <canvas id="demo3" class="playground" width="200" height="200"></canvas>
+    <canvas id="demo4" class="playground" width="200" height="200"></canvas>
+</div>
+</main>
+    <script src="js/canvas.js"></script>
+
+</body>
+</html>

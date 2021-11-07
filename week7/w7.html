@@ -17,7 +17,7 @@
     
     <nav>
       <ul class="list">
-        <li>📖<a href="w5.html">Notes</a></li>
+        <li>📖<a href="w7.html">Notes</a></li>
         <li>🚀<a target="_blank" href="#">Exercises</a></li>
         <li>📚<a target="_blank" href="#">References</a></li>
         <li>🐶<a href="team.html">Team Activity</a></li>
@@ -25,25 +25,151 @@
     </nav>
     </header>
     <main>
-      <h2>Lesson 5</h2>
+      <h2>Lesson 7</h2>
       <section>
-          <h2>Testing and Debugging</h2>
+          <h2>Further functions</h2>
+          <p>A function is a first-class object that can have properties and methods</p>
           <div>
-          <h3>Responsibility as a programmer</h3>
-          <ul>
-              <li>minimize the programmer error</li>
-              <li>provide a positive user experience</li>
-              <li>predict any interactions may occurs</li>
-              <li>predict any interactions may occurs</li>
-              <li>design program prevents the user making the error</li>
-          </ul>
+          <p><b>.length</b></p>
+          <p>returns how many properties the function has</p>
+          </div>
+        <div>
+          <p><b>call(), apply()</b></p>
+          <p>set the value of this inside a function</p>
         </div>
         <div>
-            <h3></h3>
+          <p>Case 1</p>
+          <p>If a function requires any parameters</p>
+          <p>function name(par1){}</p>
+          <p>name.call( arg1, arg2);</p>
+          <p></p>
+          <p>It is always the value of this provided as an argument</p>
         </div>
-        <div></div>
-        <div></div>
+        <div>
+          <p>Case 2</p>
+          <p>If a function refers to an object as this, provide null as its first argument.</p>
+          <p>function name(){}</p>
+          <p>function name(){}</p>
+        </div>
+        <div>
+          <p>Case 3</p>
+          <p>If the arguments are an array </p>
+          <p>name.apply( null, [ ] );</p>
+        </div>
+        <div>
+        <h3>Custom properties</h3>
+        <p>function.property = "";</p>
+        <h3>Memoization</h3>
+        <p> provides result caching </p>
+        <p><b>.cache</b></p>
+        <p>can save the result while a function takes some time to return a value</p>
+        <p>if the same argument is called, the value return from the cache memory</p>
+      </div>
+      <div>
+        <h3>(IIFE) Immediately invoked Function Expression</h3>
+        <p> { const variable = 0 ; }</p>
+        <ul>
+          <li>is an anonymous function</li>
+          <li>is invoked as soon as it is defined</li>
+          <li>keep any variables  in the scope</li>
+          <li>all the variable inside only exists while IIFE is invoked, then it will disappear</li>
+          <li>set up any initialization code needs only once</li>
+          <li>good for using strict mode </li>
+        </ul>
+        <p>(function( ) {'use strict';</p>
+        <p>//All the codes come here</p>
+        <p>})();</p>
+      </div>
+      <div>
+        <h3>Self-contained code blocks</h3>
+        <p>code can added or removed separately</p>
+        <p>{ const variable = a }</p>
+        <p>{ const variable = b }</p>
+      </div>
+      <div>
+        <h3>Define and Rewrite Functions </h3>
+        <p>wht funciton can do</p>
+        <ul>
+          <li>call</li>
+          <li>define</li>
+          <li>redefine</li>
+        </ul>
+        <p>rewriting function</p>
+        <p>name() {}</p>
+         <p>name = funciton() {}</p>
+      </div>
+      <div>
+        <h3>Recursive Functions</h3>
+        <ul>
+          <li>keep invoking itself until meet a certain condition</li>
+          <li>while repeating the process</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Callbacks</h3>
+        <ul>
+          <li>recall functions as an argument to another function</li>
+          <li>asynchronous programming</li>
+          <li>event loop; a function can continue to run until another task to be completed</li>
+        </ul>
+        <p>promises</p>
+        <ul>
+          <li>the future result of an asynchronous operation</li>
+          <li>simplify the process of callbacks</li>
+        </ul>
+      </div>
       </section>
+    <section>
+      <h2>Ajax</h2>
+      <div>
+<p>🧐 What is Ajax?</p>
+<ul>
+  <li>A technique allows communicating with a server asynchronously</li>
+  <li>updates the pages without reloading</li>
+  <li>The data can be any form, but usually JASON</li>
+  <li>The data can be any form, but usually JASON</li>
+</ul>
+      </div>
+      <div>
+        <h3>The data can be any form, but usually JASON</h3>
+        <p>fetch(request)</p>
+        <p>.then (response) =></p>
+        <p>.catch(error => )</p>
+      </div>
+      <div>
+        <h3>Request</h3>
+        <ul>
+          <li>GET : retrieve data</li>
+          <li>POST :send data</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Response Interface</h3>
+        <p>control the response of a request</p>
+        <p>response objects</p>
+        <ul>
+          <li>headers</li>
+          <li>url</li>
+          <li>redirected: redirect to another URL</li>
+          <li>type</li>
+          <li>response.blob(): file downloading</li>
+          <li>JSON</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Header Interface</h3>
+        <p>create HTTP headers</p>
+        <p>headers objects</p>
+        <ul>
+          <li>has()</li>
+          <li>get()</li>
+          <li>set()</li>
+          <li>append()</li>
+          <li>delete()</li>
+          <li>keys(), values(), ntries()</li>
+        </ul>
+      </div>
+    </section>
       </main>
 
       <footer>

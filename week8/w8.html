@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD330 week8 notes">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>
+        WDD330 Mai Manago | Portfolio | week8| Notes
+    </title>
+
+</head>
+<body>
+    <header>
+        <h1>WDD330 Portfolio</h1>
+    
+    <nav>
+      <ul class="list">
+        <li>📖<a href="w8.html">Notes</a></li>
+        <li>🚀<a target="_blank" href="canvas.html">Exercises</a></li>
+        <li>📚<a target="_blank" href="#">References</a></li>
+        <li>🐶<a href="starwars.html">Team Activity</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+      <h2>Lesson 8</h2>
+      <section>
+          <div>
+              <h1>Transforms and Transitions</h1>
+              <h2>Transform functions</h2>
+              <p>It apply the values in the order provided</p>
+              <p>{ transform: value1 value2 value3 }</p>
+              <ul>
+                  <li>translate</li>
+                  <li>scale</li>
+                  <li>rotate</li>
+                  <li>skew</li>
+              </ul>
+            </div>
+            <div>
+                <h3>Translating</h3>
+                <ul>
+                    <li>It can move elements without flow impact vs position property</li>
+                    <li>does not work on inline-elements</li>
+                    <li>add { display: inline-block}  for inline-elements</li>
+                </ul>
+                <p>{ transform: translate( x, y ); } </p>
+                <p>translateX( );</p>
+                <p>translateY( );</p>
+            </div>
+              <div>
+                  <h3>Scaling</h3>
+                  <ul>
+                      <li>It does not have a flow impact</li>
+                      <li>It grow or shrink elements towards its center</li>
+                  </ul>
+                  <p>transform: scale( x, y );</p>
+                  <p>scaleX( );</p>
+                  <p>scaleY( );</p>
+              </div>
+          <div>
+              <h3>Rotation</h3>
+              <p>rotate( deg)</p>
+              <ul>
+                  <li>specify the angle value in degrees moving to clockwise</li>
+                  <li>rotates element around the center point as an origin</li>
+                  <li>the default origin point is the center of the element</li>
+              </ul>
+          </div>
+          <div>
+              <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew()"></a>Skew</h3>
+              <p>rotate( x, y )</p>
+              <p>skewX( );</p>
+              <p>skewY( );</p>
+          </div>
+          <div>
+              <h3>transform-origin</h3>
+              <p>transform-origin: 0 0;</p>
+              <ul>
+                  <li>controlling the origin</li>
+                  <li>background-position: 0 0; (default value)</li>
+              </ul>
+          </div>
+      </section>
+      <section>
+          <div>
+          <h2>Transitions</h2>
+          <ul>
+              <li>less processing rather than using Java Script</li>
+              <li>appear smoothly especially on mobiles</li>
+              <li>can animate by switching property</li>
+          </ul>
+<ol>
+    <li>The original state of the element declaration in the default style</li>
+    <li>The final state of the transitioned element declaration</li>
+    <li>Include the transition functions in 1.</li>
+</ol> 
+</div>
+<div><h3>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties"></a>
+    Specify the property</h3>
+<ul>
+    <li>define which property to transition</li>
+    <li>the default value is all for using when animate every property</li>
+    <li>property1, property2 ;</li>
+</ul>
+</div>
+<div>
+    <h3>Define the length of animate time</h3>
+    <p>transition-duration: </p>
+<ul>
+    <li>set how long the transition will take</li>
+    <li>specify the time in seconds (s) or milliseconds (ms)</li>
+    <li>the optimum time is 200ms</li>
+</ul>
+</div>
+<div>
+    <h3>Control pace</h3>
+    <p> transition-timing-function: </p>
+        <ul>
+            <li>adjust the speed of the transition</li>
+        </ul>
+        <p>key terms</p>
+        
+        <div class="pacemaker">linear</div>
+        <div class="pacemaker">ease</div>
+        <div class="pacemaker">ease-in-out</div>
+        <div class="pacemaker">ease-in</div>
+        <div class="pacemaker">ease-out</div>
+        <ul>
+            <li><a href="https://cubic-bezier.com/#.17,.67,.83,.67"> 🧐 cubic-bezier</a></li>
+        </ul>
+        <p>linear is the same as cubic-bezier(0, 0, 1, 1)</p>
+</div>
+<div>
+    <h3>Adjust the time animate starts for users</h3>
+    <p>transition-delay:</p>
+    <ul>
+        <li>set how long delay the transition begins</li>
+        <li>the default is 0</li>
+    </ul>
+    <p>{ transition: duration delay perform }</p>
+    <ul>
+        <li>the values can be in any order</li>
+        <li>duration must come before the delay</li>
+    </ul>
+</div>
+<div>
+    <h3>Multiple transitions</h3>
+    <p>{ transition-* : property1, property2; }</p>
+</div>
+      </section>
+      <section>
+          <h2>Animations</h2>
+          <div>
+          <h3>Create keyframes</h3>
+          <ul>
+              <li>insert steps between the animation start and end</li>
+          </ul>
+          <p>@keyframe name { </p>
+          <p>from { }</p>
+          <p>to { }</p>
+          <p>}</p>
+          <ul>
+            <li>specify how far the keyframe location along the animation</li>
+        </ul>
+        <p>@keyframe name { </p>
+            <p>0% { }</p>
+            <p>100% { }</p>
+            <p>}</p>
+        </div>
+        <div>
+            <h3>Assign a name</h3>
+            <p>animation-name: name;</p>
+            <p>attach a name of the keyframe as a property</p>
+        </div>
+        <div>
+            <h3>Declaring the duration</h3>
+            <p>animation-duration:</p>
+ <ul>
+     <li>allocate the time for the animation to complete</li>
+     <li>the default is 0s</li>
+ </ul>
+        </div>
+<div>
+    <h3>animation-timing-function</h3>
+    <ul>
+        <li>linear</li>
+        <li>ease</li>
+        <li>ease-in</li>
+        <li>ease-out</li>
+        <li>cubic-bezier</li>
+        <li>step-start</li>
+        <li>step-end</li>
+        <li>steps(number, direction)</li>
+    </ul>
+</div>
+<div>
+    <p>steps() function:</p>
+    <p>determine direction options</p>
+    <ul>
+        <li>start</li>
+        <li>end</li>
+    </ul>
+</div>
+<div>
+    <p>animation-iteration-count: </p>
+    <ul>
+        <li>define how many times the animation will play through</li>
+        <li>infinite never ends repeating</li>
+        <li>the default is 1 that will play only once</li>
+    </ul>
+</div>
+<div>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction">animation-direction:</a></p>
+    <ul>
+        <li>Animations complete at 100% keyframe and back to the 0% keyframe to play again</li>
+        <li>Playing animations reverse, also reverse timing functions</li>
+    </ul>
+    <p>options</p>
+    <ul>
+        <li>normal (default)</li>
+        <li>reverse</li>
+        <li>alternate</li>
+        <li>alternate-reverse</li>
+    </ul>
+</div>
+<div>
+    <p>animation-delay:</p>
+    <ul>
+        <li>define how long it will take to start the browser begins playing the animation</li>
+    </ul>
+</div>
+<div>
+    <p><a href="https://www.youtube.com/watch?v=irJXZnA3g5U](https://www.youtube.com/watch?v=irJXZnA3g5U">animation-fill-mode:</a></p>
+<ul>
+    <li>none (default)</li>
+    <li>forwards (0%)</li>
+    <li>backwards (100%)</li>
+    <li>both (0% play 100%)</li>
+</ul>
+</div>
+<div>
+    <p>animation-play-state: </p>
+    <ul>
+        <li>running (default)</li>
+        <li>paused</li>
+    </ul>
+</div>
+<div>
+    <p>questions</p>
+    <p>Is the background-position is only used for animation?</p>
+</div>
+</section>
+</body>
+</html>
