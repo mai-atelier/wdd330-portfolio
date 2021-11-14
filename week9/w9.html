@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD330 week8 notes">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>
+        WDD330 Mai Manago | Portfolio | week9| Notes
+    </title>
+
+</head>
+<body>
+    <header>
+        <h1>WDD330 Portfolio</h1>
+    
+    <nav>
+      <ul class="list">
+        <li>📖<a href="w9.html">Notes</a></li>
+        <li>🚀<a target="_blank" href="animation.html">Exercises</a></li>
+        <li>📚<a target="_blank" href="#">References</a></li>
+        <li>🐶<a href="javascript30-drums/index-START.html">Team Activity</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+      <h1>Lesson 9</h1>
+      <section>
+          <p>        The global object is an environment of JS        </p>
+
+          <h2>BOM (The Browser Object Model)</h2>
+        <p> a collection of methods and properties that contain information about the browser and the screen
+        </p>
+        
+        <h3>Dialogs</h3>
+        <ul>
+            - alert()
+            - confirm() :giving a option ok or cancel
+            - prompt() :input texts
+        </ul>
+        
+        <h3>Browser information</h3>
+        <p>        window.navigator.userAgent </p>
+        <p> window.location.</p>
+        <ul>
+        - href
+        - protocol
+        - port
+        - host
+        - hostname
+        - pathname
+        - search
+        - has
+        - origin
+        - reload()
+        - assign()
+        - replace()
+        - toString()
+        </ul>
+        
+        
+        <h3>Browser history</h3>
+        <p> window.history</p>
+        
+       <ul>
+           <li>length</li>
+           <li>go() :a specific page starting +-0</li>
+           <li>forward(), back()</li>
+       </ul>
+        
+       <h3>Screen Information</h3>
+        <p>window.screen</p>
+        
+        💡useful for mobile screens
+        
+        <ul>
+            - height
+            - width
+            - availHeight
+            - availWidth
+            - colorDepth
+        </ul>
+        
+        🤔 What are the difference between avail-?
+          </section>
+          <section>
+              <h2>🍪 cookies</h2>
+            <ul>
+                <li> a small file saves natively on the local
+                </li>
+                <li> It only can read a page from the same domain to set
+                </li>
+                <li>  It prevents accessing user personal information on browsing
+                </li>
+                <li>  It deletes when the user closes the tab or window
+                </li>
+                <li>   A cookie is a session cookie by default
+                </li>
+        </ul>
+        <p> creating a cookie jar in a documnet</p>
+            - document.cookie
+            
+        <p> To assign another cookie</p>
+            - document.cookie ='change'
+
+            <p>To remove a cookie</p>
+            - set expires='time'
+            
+            <p> To secure transmit over a secure HTTPS network  </p>
+            <p>- ='name; secure'</p>
+            
+            
+            🤔 <p>Do cookies stock information at HTTP?
+            </p>
+            <p>What path does on windows?</p>
+            <p>What is the difference between local storage? Is that about the saving location?
+            </p>
+            <p>How can we know if the cookie is not a session cookie?</p>
+            <p>What kind of situation is the timeout id used for?</p>
+            - To reset the timeout function.
+          </section>
+          <section>
+              <h2>  HTML5 APIs </h2>
+
+            data- attribute
+            data-(name)
+            
+            <ul>
+                <li>(name) is information to identify the specific elements</li>
+                <li>each element has a dataset property</li>
+            </ul>
+
+            <h3>            The Web Storage API            </h3>
+            <p>            It does not expire automatically as cookies            </p>
+            
+            localStorage
+            <ul>
+                <li>            a native object for storing data                </li>
+                <li>             strings only can be saved this is why JSON comes in                </li>
+            </ul>
+            <ul>
+                <li>saving the data
+                    - getItem('key'), JSON.stringify
+                </li>
+                <li>
+                    retrieve the data
+                    - setItem('key', name), JSON.parse
+                </li>
+                <li>
+                deleting the data
+                - removeItem('name')
+                - clear() :remove everything completely  
+                </li>
+                <li>
+                    event type
+                    - storage
+                </li>
+                <li>
+                    addEventListner('storage', (e)⇒{ }, false);         
+                </li>
+            </ul>
+         
+            
+            <h3>            Different types of API            </h3>
+            <ul>
+                <li>Geolocation API</li>
+                <li>Web Worker API</li>
+                <li>Notification API</li>
+                <li>Media API</li>
+            </ul>
+            
+            supporting browsers
+            - a shim and a polyfill
+          </section>
+          </main>
+          </body>
+          </html>
