@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD330 week10 notes">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>
+        WDD330 Mai Manago | Portfolio | week10| Notes
+    </title>
+
+</head>
+<body>
+    <header>
+        <h1>WDD330 Portfolio</h1>
+    
+    <nav>
+      <ul class="list">
+        <li>📖<a href="w10html">Notes</a></li>
+        <li>🚀<a target="_blank" href="validation.html">Exercises</a></li>
+        <li>📚<a target="_blank" href="#">References</a></li>
+        <li>🐶<a href="quakers.html">Team Activity</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+        <h1>Lesson 10</h1>
+        <section>    
+            <div>
+                <h2>Fetch API</h2>
+                <ul>
+                    <li>Provides a JS interface</li>
+                    <li>Access and manipulate HTTP pipeline partialy</li>
+                    <li>Provides requests and responses</li>
+                    <li>Fetch resources asynchronously : fetch()</li>
+                </ul>
+            </div>
+                <div>
+                <p>fetch()</p>
+                <p>Returns a promise instead of the JSON response directly</p>
+                    
+                <div>
+                    fetch(resource)<br>
+                    .then (response => response.json())  //fetch a JSON file<br>
+                    .then(data => <br>
+                     Return response.json(); //parses JSON response into native JavaScript objects <br>
+                    </div>
+
+                    <div>
+<h3>Request options</h3>
+                        <p>Init object </p>
+                        <p>                        Control a number of different settings                        </p>
+                        
+                       <p>Method:</p>
+                        <ul>
+                            <li>GET</li>
+                            <li>POST</li>
+                            <li>PUT</li>
+                            <li>DELETE</li>
+                        </ul>
+                        <p>Mode:</p>
+                     <ul>
+                         <li>Cors</li>
+                         <li> No-cors</li>
+                         <li>Same-origin</li>
+                     </ul>
+                     <p>Cache:</p>
+                        <ul>
+                            <li>no-cache</li>
+                            <li> reload</li>
+                            <li>force-cache</li>
+                            <li>only-if-cached</li>
+                        </ul>
+<p>  Credentials:</p> 
+<ul>
+    <li>Includes</li>
+    <li>Same origin</li>
+    <li>Omit</li>
+</ul>
+                       <p>Headers:</p> 
+                        <ul>
+                            <li>'Content-Type': 'application/json'</li>
+                        </ul>
+                        
+                        <p> Redirect:</p>
+                           <ul>
+                               <li>follow</li>
+                               <li>manual</li>
+                               <li>error</li>
+                           </ul>
+                        
+                           <p>referrerPolicy: </p>
+                           <ul>
+                               <li>*no-referrer-when-downgrade</li>
+                               <li>no-referrer</li>
+                               <li>origin</li>
+                               <li>origin-when-cross-origin</li>
+                               <li>same-origin</li>
+                               <li>strict-origin</li>
+                               <li>strict-origin-when-cross-origin</li>
+                               <li>unsafe-url</li>
+                           </ul> 
+                    <p>    body: </p>
+                        <ul>
+                            <li>body data type must match "Content-Type" header</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div>
+                    <h3>  Uploading JSON data </h3>
+                    <p>  const data = { username: 'example' }; </p>
+                    </div>
+                    
+                    <div>
+                    fetch('https://example.com/profile', {
+                      method: 'POST', // or 'PUT'
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify(data),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                      console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                      console.error('Error:', error);
+                    });
+                </div>
+                <div>
+                    <h3>Uploading a file</h3>
+                    <p>input type = “file” </p>
+                    
+                    <p>FormData()</p>
+                    <p>fetch()</p>
+
+                    <p>🤔 What is the difference between using put and post methods? </p>
+                </div>
+                    <div>
+                    Request()
+                </div>
+                <div>
+                    Headers() (week7)
+                    Create an original header with an object
+                    
+                    Headers object Guard
+                    none: default
+                    Request
+                    Request-no-cors
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Client-side form validation</h2>
+🤔 
+<p>What form validation is?</p>
+<p>Why it is important?</p>
+<p>How to apply?</p>
+
+<ol>
+    <li>Submitting a form 
+        <ul>Checklist
+            <li>All required form controls are filled out </li>
+            <li>See the data is in the correct format (data type) </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>Case1 Valid
+                    <li>CSS :valid </li>
+                </ul>
+            </li>
+            <li>
+                <ul>Case2 Invalid
+                    <li>CSS : invalid </li>
+                    <ul>Browser: 
+                        <li>Block the form</li> 
+                        <li>Display error message</li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>Validating
+        <ul>
+            <li>Browser: Client-side validation</li>
+            <li>Server: Server-side validation
+            </li>
+        </ul>
+    </li>
+    <li>built in form validation
+        <ul>
+            <li>HTML5 form controls</li>
+            <li>JavaScript</li>
+        </ul>
+    </li>
+    <li>Saved in a database</li>
+</ol>
+
+<p>Type of errors</p>
+ badInput, patternMismatch, rangeOverflow or rangeUnderflow, stepMismatch, tooLong or tooShort, typeMismatch, valueMissing, or a customError
+
+<div>
+<h3>HTML5 form controls</h3>
+<h4>“Required”</h4>
+<ul>
+    <li>minlength and max length: constraining the length </li>
+    <li>min and max: constraining the value</li>
+    <li>type</li>
+    <li>pattern: specifies the regular expression (week7)</li>
+</ul>
+
+<h4>“Pattern”</h4>
+<p>The pattern attribute is not required</p>
+<p>Textarea does not support the pattern attribute</p>
+</div>
+<div>
+<h3>JavaScript</h3>
+<p>take control over the look and feel of native error messages</p>
+
+<h2>The Constraint Validation API</h2>
+<p>A set of methods and properties available on the form element DOM interfaces</p>
+<p>Selecting elements</p>
+<p>HTML(element name)Element</p>
+<ul>
+    <li>Button</li>
+    <li>Fieldset</li>
+    <li>Input</li>
+    <li>Output</li>
+    <li>Select</li>
+    <li>Textarea</li>
+</ul> 
+<p>Properties</p>
+<p>validationMessage</p>
+</div>
+        </section>
+        </main>
+        </body>
+        </html>
