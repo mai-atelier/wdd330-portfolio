@@ -18,9 +18,9 @@ const baseUrl ='https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&
 
 function testGetQuakesForLocation(){
   // call the getLocation function to get the lat/long
-
+  getLocation();
   // use that information to build out the correct URL
-  const geoUrl = baseUrl + 'add location information here' 
+  const geoUrl = baseUrl + //add location information here
   // use the url to request the correct quakes 
 
   //log out the quakes for now.

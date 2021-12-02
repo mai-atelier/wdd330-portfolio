@@ -38,24 +38,20 @@ const hikeList = [
 
   const imgBasePath = "//byui-cit.github.io/cit261/examples/";
 
-  //on load grab the array and insert it into the page
-  window.addEventListener("load", () => {
-    showHikeList();
-  });
-  
- 
-  function showHikeList() {
+ export default class Hikes {
+  showHikeList() {
     const hikeListElement = document.getElementById("hikes");
     hikeListElement.innerHTML = "";
     renderHikeList(hikeList, hikeListElement);
   }
+ }
 
-  
   function renderHikeList(hikes, parent) {
     hikes.forEach(hike => {
       parent.appendChild(renderOneHike(hike));
     });
   }
+
   function renderOneHike(hike) {
     const item = document.createElement("li");
   
@@ -71,6 +67,7 @@ const hikeList = [
                       <p>${hike.difficulty}</p>
                   </div>
           </div>`;
+  return item;
   }
 
-  //export default Hikes;
+  export default Hikes;

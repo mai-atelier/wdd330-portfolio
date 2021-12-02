@@ -64,6 +64,7 @@ export function getJSON(url) {
         .then(function(response) {
             if (!response.ok) {
                 throw Error(response.statusText);
+                //display the HTTP status code
             } else {
                 return response.json();
             }
