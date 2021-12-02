@@ -51,7 +51,7 @@ close btn
 
 
 */
-const url ='http://bloowatch.org/developers/json/species'
+const url ='https://bloowatch.org/developers/json/species'
 fetch(url,
     //create a header
  {  method: 'GET',
