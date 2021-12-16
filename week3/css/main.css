@@ -13,7 +13,7 @@ header h1{
     margin: 0;
 }
 
-.list li a{
+a{
   text-decoration: none;
 }
 
@@ -25,9 +25,14 @@ nav ul li+li {
     margin: 0.25em;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color:black;
+}
 main ul li+li {
     margin: .5em 0;
 }
+
 h3 {
     margin: 0;
 }
