@@ -29,6 +29,7 @@ nav ul li a {
     text-decoration: none;
     color:black;
 }
+
 main ul li+li {
     margin: .5em 0;
 }
